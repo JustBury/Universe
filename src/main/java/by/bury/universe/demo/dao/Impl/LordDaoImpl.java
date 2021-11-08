@@ -64,8 +64,8 @@ public class LordDaoImpl implements LordDao {
 
     @Override
     public List<Lord> getLordSlackers() {
-        Session session = entityManager.unwrap(Session.class);
-        Query<Lord> theQuery = session.createQuery(SELECT_LORD_SLACKERS, Lord.class);
+        Session session2 = entityManager.unwrap(Session.class);
+        Query<Lord> theQuery = session2.createQuery(SELECT_LORD_SLACKERS, Lord.class);
         List<Lord> lords = theQuery.getResultList();
         return lords;
     }
